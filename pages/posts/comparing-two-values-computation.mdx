@@ -1,0 +1,62 @@
+---
+title: Comparing two values computation
+date: 2023-10-10
+description: Programmers - 두 수의 연산값 비교하기(181938)
+tag: javascript, string, number
+author: Apensia
+---
+
+# Question
+
+Signature ⊕ returns value with two integers aligned together. For instance,
+
+12 ⊕ 3 = 123
+3 ⊕ 12 = 312
+
+Given the positive integer of `a` and `b`, provide a `solution` function that `return`s which of the value is much bigger
+which are a ⊕ b or 2 \* `a` \* `b`
+
+if a ⊕ b and 2 \* `a` \* `b` return same value, then return a ⊕ b.
+
+<br />
+
+# Analysis
+
+This problem is basically about converting String and Number in JavaScript.
+
+In order to compute the ⊕ sign, I firstly needed to convert `a` and `b` as string values and combine them up and convert
+its type into number so that I could compare the value of 2 \* `a` \* `b`.
+
+<br />
+
+# Solution
+
+<CH.Scrollycoding>
+
+### hi
+
+```js focus=1
+function solution(a, b) {
+  const computedValue = +(String(a) + String(b));
+  const toCompare = 2 * +a * +b;
+
+  return computedValue >= toCompare ? computedValue : toCompare;
+}
+```
+
+---
+
+### hi
+
+```js focus=1
+function solution(a, b) {
+  const computedValue = +(String(a) + String(b));
+  const toCompare = 2 * +a * +b;
+
+  return computedValue >= toCompare ? computedValue : toCompare;
+}
+```
+
+</CH.Scrollycoding>
+
+<br />
